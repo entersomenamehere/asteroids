@@ -423,6 +423,7 @@ Ship = function () {
       if (this.delayBeforeBullet <= 0) {
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
+            this.delayBeforeBullet = 10;
             SFX.laser();
             var bullet = this.bullets[i];
             var rad = ((this.rot-90) * Math.PI)/180;
